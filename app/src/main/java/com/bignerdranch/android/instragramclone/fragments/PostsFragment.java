@@ -34,6 +34,8 @@ public class PostsFragment extends Fragment {
     protected PostsAdapter adapter;
     protected List<Post> allPosts;
 
+    private SwipeRefreshLayout swipeContainer;
+
     public PostsFragment() {
         // Required empty public constructor
     }
@@ -62,6 +64,27 @@ public class PostsFragment extends Fragment {
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
         queryPosts();
 
+        swipeContainer = (SwipeRefreshLayout) view.findViewById(R.id.swipeContainer);
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                fetchTimelineAsync(0);
+            }
+        });
+
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+    }
+
+    private void fetchTimelineAsync(int page) {
+        // Remember to CLEAR OUT old items before appending in the new ones
+        adapter.clear();
+        // ...the data has come back, add new items to your adapter...
+        queryPosts();
+        // Now we call setRefreshing(false) to signal refresh has finished
+        swipeContainer.setRefreshing(false);
     }
 
     protected void queryPosts() {
