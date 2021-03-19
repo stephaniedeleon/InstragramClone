@@ -36,7 +36,7 @@ Here's a walkthrough of implemented user stories:
 
 |                      Switching Between Tabs          |          Refreshing |
 | :--------------------------------------: | :--------------------------------------: |
-| <img src='walkthrough3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> | <img src='walkthrough2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> |
+| <img src='walkthrough3.gif' title='Video Walkthrough 3' width='' alt='Video Walkthrough 3' /> | <img src='walkthrough2.gif' title='Video Walkthrough 2' width='' alt='Video Walkthrough 2' /> |
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
@@ -96,7 +96,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough.gif' title='Video Walkthrough 1' width='' alt='Video Walkthrough 1' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
